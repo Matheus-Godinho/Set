@@ -22,6 +22,7 @@ public class Program {
 		instructor.addCourse(new Course('B'));
 		instructor.addCourse(new Course('C'));
 		for (Course c: instructor.getCourses()) {
+			System.out.printf("How many students for course %s? ", c.getName());
 			n = sc.nextInt();
 			for (int i = 1; i <= n; i++) {
 					code = sc.nextInt();
@@ -30,7 +31,7 @@ public class Program {
 			}
 		}
 		
-		System.out.printf("%d%n", instructor.totalStudents());
+		System.out.printf("Total students: %d%n", instructor.totalStudents());
 		
 		sc.close();
 
